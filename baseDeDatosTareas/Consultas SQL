@@ -1,0 +1,75 @@
+// (SELECT) Trae todo
+SELECT * from tabla;
+
+// (SELECT) Trae solo esas columnas
+SELECT cedula, nombre, apellido from tabla;
+
+// (DISTINCT) Trae toda la columna pero no muestra los datos que se repiten
+SELECT DISTINCT cedula FROM tabla;
+
+// (WHERE) Trae todo donde el sueldo sea mayor a 500
+SELECT * from tabla WHERE sueldo > 500;
+
+// (AND) Trae todo donde el sueldo sea mayor a 500 Y menor a 600 
+SELECT * FROM tabla WHERE sueldo > 500 AND sueldo < 600;
+
+// (OR) Trae todo donde el sueldo sea mayor a 500 Y menor a 600 
+SELECT * FROM tabla WHERE sueldo > 500 OR sueldo < 600;
+
+// (IN) Trae todo donde el apartamento sean los introducidos
+SELECT * FROM tabla WHERE departamento IN ("1", "3");
+
+// (BETWEEN) Trae todo donde el apartamento sean los introducidos
+SELECT nombre, apellido FROM tabla WHERE sueldo BETWEEN 100 and 500; 
+SELECT nombre, apellido FROM tabla WHERE sueldo BETWEEN 100 or 500; 
+
+// (LIKE) Trae todo donde tenga las terminaciones o contengan tales letras
+SELECT nombre, apellido, sueldo FROM tabla WHERE nombre LIKE "%AN"; // Personas que terminan con AN
+SELECT nombre, apellido, sueldo FROM tabla WHERE nombre LIKE "AN%"; // Personas que comienzan con AN
+SELECT nombre, apellido, sueldo FROM tabla WHERE nombre LIKE "%AN%"; // Personas que contengan las letras con AN
+
+// (ORDER BY) Trae todo donde tenga las terminaciones o contengan tales letras
+SELECT nombre, apellido, sueldo FROM tabla WHERE sueldo > 500 ORDER BY cedula DESC"; // Va a ordenar la cedula de forma DESCENDENTE
+SELECT nombre, apellido, sueldo FROM tabla WHERE sueldo > 500 ORDER BY cedula ASC"; // Va a ordenar la cedula de forma ASCENDENTE
+
+// (COUNT) Cuenta cuantas cedulas hay en esa columna
+SELECT COUNT (cedula) FROM tabla; 
+
+// (MAX) Trae el numero mayor de esa columna
+SELECT MAX(sueldo) FROM tabla; 
+
+// (MIN) Trae el numero menor de esa columna
+SELECT MIN(sueldo) FROM tabla; 
+
+// (SUM) Suma los numeros de esa columna
+SELECT SUM(sueldo) FROM tabla WHERE departamento = 1; 
+
+// (AVG) Calcula el promedio de esa columna
+SELECT AVG(sueldo) FROM tabla WHERE departamento = 1; 
+
+// (GROUP BY) 
+SELECT nombre, apellido, departamento FROM tabla GROUP BY departamento;
+
+// (HAVING) 
+SELECT nombre, apellido, departamento FROM tabla GROUP BY departamento HAVING SUM(sueldo);
+
+// (AS) Sirve para cambiar el nombre de la columna
+SELECT nombre AS "Nombre del Cliente", apellido AS "Apellido del Cliente" FROM tabla;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+// (CARTESIANO) Compara y trae los mismos codigos de ambas tablas y la simplificacion de las columnas 
+SELECT em.nombre_emp, em.nacionalidad, tr.identificador 
+FROM empleado em, trabaja tr WHERE em.codigo_emp = tr.codigo_emp;
+
+// (INNER JOIN) Compara y trae los mismos codigos de ambas tablas y la simplificacion de las columnas 
+SELECT em.nombre_emp, em.nacionalidad, tr.identificador 
+FROM empleado em INNER JOIN trabaja tr ON em.codigo_emp = tr.codigo_emp;
+
+// (LEFT JOIN) 
+SELECT al.id_album, al.titulo, ca.titulo, ca.duracion 
+FROM album al LEFT JOIN cancion ca ON al.id_album = ca.id_album;
+
+// (RIGHT JOIN)
+SELECT al.id_album, al.titulo, ca.titulo, ca.duracion 
+FROM album al RIGHT JOIN cancion ca ON al.id_album = ca.id_album;

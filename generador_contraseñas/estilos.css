@@ -1,0 +1,16 @@
+
+			*{padding:0;margin:auo;}
+			body{width:80%;margin:auto;background:#313130;font-family:roboto;color:#FFFFFF;}
+			#contenedor{width:90%;max-width:900px;margin:auto;background:#040086;border:5px solid #FFFFFF;margin-top:50px;margin-bottom:50px;border-radius:5%}
+			#header,#main,#canvasprinter,#footer{width:100%;margin:auto;}
+			#header{border-bottom:5px solid #FFFFFF;}
+			#header p{padding:20px 20px;font-size:72px;text-align:center;}
+			#main{border-bottom:5px solid #FFFFFF;}
+			#lateral1{padding:20px 60px;width:40%;float:left;}
+			#lateral2{padding:20px 60px;}
+			#canvasprinter{margin-top:30px;}
+			#footer h2{text-align:center;padding:20px;}
+			.gnpForm input[type="text"]{padding:10px;display:block;margin-bottom:15px;background:#040086;color:#FFFFFF;}
+			.gnpForm input[type="button"]{padding:10px;color:#FFFFFF;background:#040086;border:1px solid #FFFFFF;}
+			.gnpForm label{display:block;}
+			canvas{border:5px solid #FFFFFF;}

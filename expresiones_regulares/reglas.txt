@@ -1,0 +1,30 @@
+
+.       - Cualquier carácter excepto saltos de línea
+\d      - Dígitos (0-9)
+\D      - No dígitos (0-9)
+\w      - Carácter alfanumérico (a-z, A-Z, 0-9, _)
+\W      - No carácter alfanumérico
+\s      - Espacio en blanco (espacio, tabulador, salto de línea)
+\S      - No espacio en blanco (espacio, tabulador, salto de línea)
+
+\b      - Límite de palabras
+\B      - No límite de palabras
+^       - Inicio de una cadena
+$       - Final de una cadena
+
+[]      - Valida lo que está en los corchetes 
+[^ ]    - No valida lo que está en los corchetes 
+( )     - Grupos
+|       - Operador or
+
+Cuantificadores:
+*       - 0 o más caracteres
++       - 1 o más caracteres
+?       - 0 o Ninguno
+{3}     - Número exacto
+{3,4}   - Rango de números (Mínimo, Máximo)
+
+
+#### Ejemplo ####
+
+[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]

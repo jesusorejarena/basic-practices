@@ -1,0 +1,16 @@
+{
+    "name": "maxigamers79-pc/phpmailer_practica",
+    "description": "Pruebas de correo",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "dev-master"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "jesusorejarena",
+            "email": "jesusorejarena@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="" />
+		<link rel="stylesheet" href="" />
+		<title>AJAX Simple</title>
+	</head>
+
+	<body>
+		<button onclick="sendRequest()">
+			<!-- se activa la funcion -->
+			Send AJAX Request
+		</button>
+
+		<h1 id="title"></h1>
+
+		<script>
+			//Recibir
+			/*function sendRequest() {
+				var theObject = new XMLHttpRequest(); //este metodo permite enviar y recibir datos
+				theObject.open('GET', 'backend.php', true);
+				/* a traves de este metodo le decimos que
+				va a pedir "GET" y se coloca la direccion
+				a la cual va a solicitar datos
+
+				theObject.setRequestHeader(
+					'Content-Type',
+					'application/x-www-form-urlencoded'
+				); //que tipo de datos va a solicitar
+
+				theObject.onreadystatechange = function () {
+					document.getElementById('title').innerHTML = theObject.responseText;
+				}; //metodo que se encarga de ver que estamos reciviendo y mostramos por html
+				theObject.send(); //ejecutamos la peticion
+			}*/
+
+			//Enviar
+			function sendRequest() {
+				var theObject = new XMLHttpRequest();
+				theObject.open('POST', 'backend.php', true); //le decimos que va a enviar datos "POST"
+
+				theObject.setRequestHeader(
+					'Content-Type',
+					'application/x-www-form-urlencoded'
+				);
+
+				theObject.onreadystatechange = function () {
+					document.getElementById('title').innerHTML = theObject.responseText;
+				};
+				theObject.send('username=Fazt'); //le enviamos datos al servidor
+			}
+		</script>
+	</body>
+</html>

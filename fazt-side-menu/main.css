@@ -1,0 +1,27 @@
+#sidebar{
+  position: fixed;
+  width: 200px;
+  height: 100%;
+  left: -200px;
+  transition: all 300ms linear;
+  z-index: 100;
+}
+
+#sidebar.active{
+  left: 0;
+}
+
+.sombra{
+  opacity: 0.06;
+  transition: all 300ms;
+}
+
+.logo{
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.bg-gris{
+	background-color: #f3f3f3;
+}

@@ -1,0 +1,76 @@
+Respuestas
+
+1- Conocer la cantidad de pasajeros dado un número de vuelo. 1pts
+
+	SELECT COUNT(id_vuelo) FROM lista_de_pasajeros WHERE id_vuelo = 1;
+
+
+2- Conocer la lista de pasajeros por vuelo ordenado por cedula utilizando la sentencia AS. 2pts
+
+	SELECT id_vuelo AS "Codigo del vuelo", cedula AS "Cedula", puesto AS "Asiento", clase AS "Tipo de clase" FROM lista_de_pasajeros ORDER BY cedula ASC
+
+
+3- Imprimir la lista de aviones agrupados por aerolínea. 1pts
+
+	SELECT * FROM avion ORDER BY fabricante ASC
+
+
+4- Conocer la matricula, modelo, capacidad de cada avión dado un rango de valores (between) de su capacidad. 2pts
+
+	SELECT * FROM avion WHERE capacidad BETWEEN 100 and 130;
+
+
+5- Realizar una consulta donde incluya las dos sentencias (and – or). 1pt
+
+	SELECT * FROM avion WHERE capacidad = 100 OR autonomia = 80 AND capacidad = 80 OR autonomia = 150;
+
+
+6- Realizar una consulta donde incluya la sentencia (in). 1pt
+
+	SELECT * FROM avion WHERE modelo IN ("747", "727");
+
+
+7- Realizar una consulta donde incluya la sentencia (like). 1pt
+
+	SELECT * FROM personal WHERE nombre LIKE "%ia%";
+
+
+8- Realizar una consulta donde incluya la sentencia ( HAVING ). 1pt
+
+	SELECT * FROM avion HAVING COUNT(autonomia) > 3;
+
+
+9- Conocer la lista de tripulantes por vuelo ordenado por fecha utilizando el producto cartesiano. 2 pts
+
+	SELECT tr.id_vuelo, vu.id_vuelo, tr.cedula, vu.fecha, vu.destino, vu.origen FROM tripulacion AS tr, vuelo AS vu WHERE tr.id_vuelo = vu.id_vuelo ORDER BY vu.fecha ASC
+
+
+10- Conocer la lista de tripulantes por vuelo ordenado por matricula utilizando el INNER JOIN. 2pts
+
+	SELECT vu.id_vuelo, tr.cedula, vu.matricula FROM tripulacion AS tr INNER JOIN vuelo AS vu ON tr.id_vuelo = vu.id_vuelo ORDER BY matricula ASC
+
+
+11- Aplicar el LEFT JOIN y RIGHT JOIN en una consulta. 2pts.
+
+	SELECT lis.cedula as 'Cedula de pasajeros', vu.fecha as 'Fecha de vuelo', tr.cedula as 'Cedula de la tripulacion' FROM vuelo AS vu LEFT JOIN lista_de_pasajeros AS lis ON vu.id_vuelo = lis.id_vuelo RIGHT JOIN tripulacion AS tr ON vu.id_vuelo = tr.id_vuelo
+
+
+12- Aplicar INNER JOIN donde se impliquen 3 tablas de la base de datos.4pts
+
+	SELECT vu.id_vuelo AS 'Codigo del vuelo', tr.cedula AS 'Cedula del tripulante',tr.puesto AS 'Puesto del tripulante', vu.matricula AS 'Matricula del vuelo', lis.puesto AS 'Puesto del pasajero', lis.clase AS 'Clase del pasajero' FROM tripulacion AS tr INNER JOIN vuelo AS vu INNER JOIN lista_de_pasajeros AS lis WHERE tr.id_vuelo = vu.id_vuelo AND tr.id_vuelo = lis.id_vuelo
+
+
+
+
+
+
+
+
+SELECT vu.id_vuelo, vu.destino, li.id_vuelo, li.cedula FROM vuelo AS vu LEFT JOIN lista_de_pasajeros AS li WHERE vu.id_vuelo = li.id_vuelo
+
+
+
+
+
+
+SELECT lis.cedula as 'Cedula de pasajeros', vu.fecha as 'Fecha de vuelo', tr.cedula as 'Cedula de la Tripulacion' FROM vuelo AS vu LEFT JOIN lista_de_pasajeros AS lis ON vu.id_vuelo = lis.id_vuelo RIGHT JOIN tripulacion AS tr ON vu.id_vuelo = tr.id_vuelo

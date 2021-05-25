@@ -1,0 +1,28 @@
+abcdefghijklmnopqurtuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+1234567890
+
+Ha HaHa
+
+Caracteres especiales (Tienen que ser escapados):
+.[{()\^$|?*+
+
+purocodigo.net
+
+321-555-4321
+123.555.1234
+800-555-4321
+900-555-4321
+900-555-432
+
+
+Sr. Luis
+Sr Smith
+Sra Davis
+Srta. Robinson
+Sr. S
+
+lol
+col
+sol
+mol

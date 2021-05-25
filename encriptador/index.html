@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="estilos.css" />
+		<script src="main.js"></script>
+		<title>Encriptador</title>
+	</head>
+
+	<body>
+		<header>
+			<article>
+				<p>Encriptador</p>
+			</article>
+		</header>
+
+		<div class="main" align="left">
+			<article>
+				<form>
+					<input
+						type="textarea"
+						id="cargarTexto"
+						autofocus
+						maxlength="100"
+						placeholder="$Encrypt In Base64$"
+					/>
+					<input type="button" onClick="encryptar()" value="Encrypt" />
+					<input type="button" onClick="desencryptar()" value="Decrypt" />
+				</form>
+			</article>
+		</div>
+
+		<div class="maintext" align="left">
+			<article>
+				<h3>Encrypt</h3>
+				<br />
+				<p id="imprimirTexto"></p>
+				<br />
+				<br />
+				<h3>Decrypt</h3>
+				<br />
+				<p id="imprimirTexto2"></p>
+			</article>
+		</div>
+
+		<footer>
+			<article>
+				<p>Q3JlYXRlIGJ5IE51bGxIYWNraW5n</p>
+			</article>
+		</footer>
+	</body>
+</html>

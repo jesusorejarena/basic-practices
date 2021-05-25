@@ -1,0 +1,69 @@
+para iniciar un proyecto y que tenga las dependencias de node.js
+
+	npm init -y
+
+--------------------------------------------------------------------------------
+
+webpack
+
+	npm i webpack webpack-cli -d
+
+--------------------------------------------------------------------------------
+
+para transformar el codigo
+
+	npx webpack src/app.js -o build/output.js
+
+para transformar el codigo pero con el archivo de configuracion
+
+	npx webpack -p (Produccion)
+	npx webpack -d (Desarrollo)
+
+--------------------------------------------------------------------------------
+
+para el plugin de HTML
+
+	npm i html-webpack-plugin -d
+
+para el plugin de HTML
+
+	npm i html-loader -d
+
+--------------------------------------------------------------------------------
+
+para instalar los plugins de css
+
+	npm i style-loader css-loader -d
+
+para extraer el css cuando minificamos instalamos
+
+	npm i mini-css-extract-plugin -d
+
+--------------------------------------------------------------------------------
+
+para instalar el servidor de webpack
+
+	npm install webpack-dev-server -d
+
+para activar el sevidor
+
+	npx webpack-dev-server
+
+--------------------------------------------------------------------------------
+
+para instalar JQuery
+
+	npm i jquery -d
+
+--------------------------------------------------------------------------------
+
+para instalar Imagenes
+
+	npm i file-loader
+
+--------------------------------------------------------------------------------
+
+para instalar iconos de FontAwesome
+
+	npm i font-awesome
+

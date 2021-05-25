@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="" />
+		<link rel="stylesheet" href="" />
+		<title>validacion_formularios</title>
+		<style>
+			label {
+				display: block;
+				float: left;
+				width: 70px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form id="formulario">
+			<div>
+				<label for="nombre">Nombre</label>
+				<input type="text" id="nombre" />
+			</div>
+			<div>
+				<label for="password">Password</label>
+				<input type="password" id="password" />
+			</div>
+			<input type="submit" value="Enviar" />
+		</form>
+		<div id="error"></div>
+		<script src="main.js"></script>
+	</body>
+</html>

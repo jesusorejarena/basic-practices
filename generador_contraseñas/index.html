@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="estilos.css" />
+		<script src="main.js"></script>
+		<title>Generador de contraseñas</title>
+	</head>
+
+	<body>
+		<div id="contenedor">
+			<div id="header">
+				<p>Generador de contraseñas</p>
+			</div>
+
+			<div id="main">
+				<div id="lateral1">
+					<h2>Datos</h2>
+
+					<form class="gnpForm">
+						<h2>Introduzca los datos</h2>
+						<input
+							type="text"
+							id="for1"
+							maxlength="4"
+							placeholder="Numeros"
+							autofocus
+							onBlur="f1(this)"
+						/>
+						<input
+							type="text"
+							id="for2"
+							maxlength="4"
+							placeholder="Vocales"
+							onBlur="f2(this)"
+						/>
+						<input
+							type="text"
+							id="for3"
+							maxlength="4"
+							placeholder="Consonantes"
+							onBlur="f3(this)"
+						/>
+						<input
+							type="text"
+							id="for4"
+							maxlength="4"
+							placeholder="Numeros"
+							onBlur="f4(this)"
+						/>
+						<br />
+						<br />
+					</form>
+				</div>
+
+				<div id="lateral2">
+					<h2>Opciones del Password</h2>
+
+					<form class="gnpForm">
+						<h2>Seguridad del Password</h2>
+						<label>Seguro</label>
+						<input type="radio" id="seguro" name="seguridad" />
+						<label>Muy Seguro</label>
+						<input type="radio" id="muyseguro" name="seguridad" />
+						<label>Extra Seguro</label>
+						<input type="radio" id="extraseguro" name="seguridad" />
+						<label>Ultra Seguro</label>
+						<input type="radio" id="ultraseguro" name="seguridad" />
+						<br />
+						<br />
+
+						<input
+							type="button"
+							value="Generar Password"
+							onClick="generarPassword()"
+						/>
+						<a href="codebye_MyGNP.html"
+							><input type="button" value="Intentar de nuevo"
+						/></a>
+					</form>
+				</div>
+			</div>
+
+			<div id="canvasprinter" align="center">
+				<canvas id="canvaspassword" width="600px" height="150px"></canvas>
+			</div>
+
+			<div id="footer">
+				<h2>Create by NullHacking</h2>
+			</div>
+		</div>
+
+		<script>
+			var canvas = document.getElementById('canvaspassword');
+			var ctx = canvas.getContext('2d');
+			generarPassword();
+		</script>
+	</body>
+
+	<!--NullHacking-->
+</html>

@@ -1,0 +1,76 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+body {
+	width: 98%;
+	margin: auto;
+	background: #000000;
+	font-family: arial;
+	margin-top: 100px;
+}
+header,
+.main,
+.maintext,
+footer {
+	width: 100%;
+	margin: auto;
+}
+/*header*/
+header article {
+	width: 100%;
+	padding: 20px 0px;
+}
+header article p {
+	text-align: left;
+	font-size: 48px;
+	color: #00ddff;
+	text-align: center;
+}
+/*main*/
+.main article {
+	width: 100%;
+	padding: 10px 0px;
+}
+.main article form input[type='textarea'] {
+	margin-bottom: 10px;
+	padding: 40px 0px;
+	font-size: 18px;
+	width: 100%;
+	resize: none;
+	background: #000000;
+	color: #00ddff;
+	display: block;
+	border: 1px solid #00ddff;
+}
+.main article form input[type='button'] {
+	padding: 10px;
+	color: #00ddff;
+	background: #000000;
+	border: 1px solid #ffffff;
+}
+/*main2*/
+.maintext article {
+	padding: 60px 0px;
+	border: 1px solid #00ddff;
+}
+.maintext article h3 {
+	color: #00ddff;
+}
+.maintext article #imprimirTexto {
+	font-size: 12px;
+	color: #00ddff;
+}
+.maintext article #imprimirTexto2 {
+	font-size: 18px;
+	color: #00ddff;
+}
+/*footer*/
+footer article {
+	width: 100%;
+}
+footer article p {
+	font-size: 18px;
+	text-align: right;
+	color: #00ddff;
+}
